@@ -1,1 +1,6 @@
 https://afshinr1.github.io/SENG-513-2/
+
+HOW TO PLAY : 
+Left click once to uncover an area.
+Long press to flag an area. 
+Flag all bombs and uncover all areas to win.

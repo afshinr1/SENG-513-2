@@ -88,11 +88,11 @@ let MSGame = (function () {
   }
   function updateGame(status) {
     console.log(status);
-    if (status.done === true) {
+    if (status.exploded === true) {
       clearTimeout(t);
       game.endGame(game.getRendering());
     }
-    if (status.nuncovered === status.nrows * status.ncols - status.nmines) {
+    else if (status.done) {
       clearTimeout(t);
       game.wonGame();
     }
@@ -367,7 +367,7 @@ function InitAndReset() {
     console.log(game.getStatus().nmines);
     mines.innerText = 10;
     game.clear();
-    game.init(8, 10, 10);
+    game.init(5, 10, 5);
   } else if (grid_size === "medium") {
     mines.innerText = 40;
     game.clear();

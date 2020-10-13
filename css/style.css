@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.message{
+  position: relative;
+  top: 0;
+  text-align: center;
+}
+
+.header {
+  width: 100vw;
+  background-image: linear-gradient(to right, #ffffff, #1415ff);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.grid-size {
+  background-color: #fff;
+  color: #000;
+  font-size: large;
+  margin-right: 20px;
+  height: 70%;
+}
+.message {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.mine-div {
+  display: flex;
+}
+.mine-div h3 {
+  font-size: 1rem;
+}
+
+.grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.grid div {
+  height: 3rem;
+}
+
+.row-div {
+  display: flex;
+}
+
+.grid-col {
+  background-color: rgb(214, 214, 214);
+  border: 2px solid black;
+  display: flex;
+  width: 3rem;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 1.3rem;
+}
+
+.grid-col:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.seen {
+  background-color: rgb(192, 185, 185);
+  color: blue;
+}
+
+.bomb {
+  background-color: black;
+  color: red;
+}
+
+.error {
+  color: red;
+}
+
+.flag {
+  color: purple;
+  background-color: rgb(165, 166, 167);
+}
+
+.success {
+  color: yellow;
+}
+
+@media only screen and (max-width: 700px) and (orientation: portrait){
+
+  .header {
+    width: 100vw;
+    background-image: linear-gradient(to right, #ffffff, #1415ff);
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .mine-div > h3 {
+    font-size: 1rem;
+  }
+
+  .grid div {
+    height: 2rem;
+  }
+
+  .grid-col {
+    background-color: rgb(214, 214, 214);
+    border: 2px solid black;
+    display: flex;
+    width: 1.7rem;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 1rem;
+  }
+
+  .time{
+    font-size: 1rem;
+  }
+
+  .reset-btn{
+    font-size: small;
+  }
+
+
+  .seen {
+    background-color: rgb(192, 185, 185);
+    color: blue;
+  }
+  
+  .bomb {
+    background-color: black;
+    color: red;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  .flag {
+    background-color: rgb(165, 166, 167);
+  }
+  
+  .success {
+    color: yellow;
+  }
+  
+}
+
+@media only screen and (max-width: 380) and (orientation: portrait){
+.mine-div h3{
+  font-size: 0.5rem;
+}
+}
+
+
+.disabled{
+  pointer-events: none;
+  color: rgb(11, 80, 5);
+}

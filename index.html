@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+
+    <title>Bootleg Minesweeper</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 id="time" class="time"><time>00:00:00</time></h1>
+      <select class="grid-size">
+        <option value="">None</option>
+        <option value="easy">Easy : 8 X 10</option>
+        <option value="medium">Medium : 10 X 12</option>
+      </select>
+      <div class="mine-div">
+        <h3># Mines:</h3>
+        <h3 class="mines" id="mines"></h3>
+      </div>
+      <button class="reset-btn" id="reset">Reset</button>
+    </header>
+      <h2 class="message"></h2>
+
+    <div class="grid"></div>
+  </body>
+
+  <script src="/js/script.js"></script>
+</html>

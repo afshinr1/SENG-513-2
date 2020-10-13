@@ -20,8 +20,9 @@ body {
 }
 .grid-size {
   background-color: #fff;
+  width: 50px;
   color: #000;
-  font-size: large;
+  font-size: medium;
   margin-right: 20px;
   height: 70%;
 }
@@ -40,22 +41,29 @@ body {
 
 .grid {
   position: absolute;
+  border: 1px solid black;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
+  max-width: 800px;
 }
 
-.grid div {
-  height: 3rem;
-}
 
-.row-div {
+.row-div-sm {
   display: flex;
+  height: 3rem;
+
+}
+.row-div-md {
+  display: flex;
+  height: 2rem;
+
 }
 
-.grid-col {
+
+.grid-col-sm {
   background-color: rgb(214, 214, 214);
   border: 2px solid black;
   display: flex;
@@ -66,7 +74,22 @@ body {
   font-size: 1.3rem;
 }
 
-.grid-col:hover {
+.grid-col-md {
+  background-color: rgb(214, 214, 214);
+  border: 2px solid black;
+  display: flex;
+  width: 2rem;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 1.0rem;
+}
+.disabled{
+  pointer-events: none;
+  color: rgb(11, 80, 5);
+}
+
+.grid-col-sm:hover, .grid-col-md:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -108,22 +131,40 @@ body {
   .mine-div > h3 {
     font-size: 1rem;
   }
-
-  .grid div {
-    height: 2rem;
+  .row-div-sm {
+    display: flex;
+    height: 2em;
+  
   }
-
-  .grid-col {
+  .row-div-md {
+    display: flex;
+    height: 1.5rem;
+  
+  }
+  
+  
+  .grid-col-sm {
     background-color: rgb(214, 214, 214);
     border: 2px solid black;
     display: flex;
-    width: 1.7rem;
+    width: 1.6rem;
     justify-content: center;
     align-items: center;
     color: black;
     font-size: 1rem;
   }
-
+  
+  .grid-col-md {
+    background-color: rgb(214, 214, 214);
+    border: 2px solid black;
+    display: flex;
+    width: 1.0rem;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 0.7rem;
+  }
+  
   .time{
     font-size: 1rem;
   }
@@ -133,38 +174,12 @@ body {
   }
 
 
-  .seen {
-    background-color: rgb(192, 185, 185);
-    color: blue;
+  .mine-div h3{
+    font-size: 0.8rem;
   }
   
-  .bomb {
-    background-color: black;
-    color: red;
-  }
-  
-  .error {
-    color: red;
-  }
-  
-  .flag {
-    background-color: rgb(165, 166, 167);
-  }
-  
-  .success {
-    color: yellow;
-  }
+
   
 }
 
-@media only screen and (max-width: 380) and (orientation: portrait){
-.mine-div h3{
-  font-size: 0.5rem;
-}
-}
 
-
-.disabled{
-  pointer-events: none;
-  color: rgb(11, 80, 5);
-}

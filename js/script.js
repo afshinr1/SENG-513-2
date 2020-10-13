@@ -47,14 +47,14 @@ let MSGame = (function () {
     for (let row = 0; row < nrows; row++) {
       const grid_row = document.createElement("div");
       grid_row.setAttribute("id", `${row}`);
-      grid_row.classList.add("row-div");
+      grid_row.classList.add(grid_size === 'easy' ? "row-div-sm" : 'row-div-md');
       res[row] = [];
       for (let col = 0; col < ncols; col++) {
         res[row][col] = val(row, col);
 
         const square = document.createElement("div");
         square.setAttribute("id", `${row} ${col}`);
-        square.classList.add("grid-col");
+        square.classList.add(grid_size === 'easy' ? "grid-col-sm" : 'grid-col-md');
         $(square).on("taphold", handleTap).on("click", handleClick);
 
         grid_row.appendChild(square);
@@ -289,11 +289,11 @@ let MSGame = (function () {
       for (let row = 0; row < this.nrows; row++) {
         const grid_row = document.createElement("div");
         grid_row.setAttribute("id", `${row}`);
-        grid_row.classList.add("row-div");
+        grid_row.classList.add(grid_size === 'easy' ? "row-div-sm" : 'row-div-md');
         for (let col = 0; col < this.ncols; col++) {
           const square = document.createElement("div");
           square.setAttribute("id", `${row} ${col}`);
-          square.classList.add("grid-col");
+          square.classList.add(grid_size === 'easy' ? "grid-col-sm" : 'grid-col-md');
           if (state !== "END" && state !== "WON") {
             $(square).on("taphold", handleTap).on("click", handleClick);
           }
@@ -369,9 +369,9 @@ function InitAndReset() {
     game.clear();
     game.init(8, 10, 10);
   } else if (grid_size === "medium") {
-    mines.innerText = 20;
+    mines.innerText = 40;
     game.clear();
-    game.init(10, 12, 20);
+    game.init(14, 18, 40);
   } else {
     mines.innerText = "";
     game.clear();

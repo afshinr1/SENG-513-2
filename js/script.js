@@ -367,7 +367,7 @@ function InitAndReset() {
     console.log(game.getStatus().nmines);
     mines.innerText = 10;
     game.clear();
-    game.init(5, 10, 5);
+    game.init(8, 12, 10);
   } else if (grid_size === "medium") {
     mines.innerText = 40;
     game.clear();
